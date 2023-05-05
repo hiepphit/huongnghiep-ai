@@ -1,11 +1,13 @@
 import { MessageBlock } from "../components"
 
-const content = 'this dashboard'
+// const content = 'this dashboard'
 function Dashboard() {
- return(
-    <div>
-      {content}
-      </div>
- )
+  return (
+    // <div>
+    //   {/* {content} */}
+
+    //   </div>
+    <MessageBlock />
+  )
 }
 export default Dashboard

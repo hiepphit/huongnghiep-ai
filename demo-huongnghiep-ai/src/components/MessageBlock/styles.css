@@ -1,0 +1,21 @@
+body {
+    background-color: #272B30;
+}
+
+.bg-white {
+    display: inline-block;
+    width: auto;
+    background-color: #fcfcfc;
+    border-radius: 16px;
+    color: #272B30;
+    font-size: 16px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.bg-white:hover {
+    background-color: #2A85FF;
+    color: #FCFCFC;
+}
