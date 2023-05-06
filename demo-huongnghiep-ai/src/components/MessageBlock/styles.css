@@ -1,5 +1,8 @@
 body {
     background-color: #272B30;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .bg-white {
@@ -18,4 +21,46 @@ body {
 .bg-white:hover {
     background-color: #2A85FF;
     color: #FCFCFC;
+}
+
+.text-block {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+
+
+}
+
+.text-1 {
+    background-color: #fcfcfc;
+    color: #1A1D1F;
+    border-radius: 16px;
+    padding: 10px 12px;
+    align-self: stretch;
+    width: 450px;
+    height: 220px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+}
+
+.text-2 {
+    background-color: #fcfcfc;
+    color: #2A85FF;
+    width: 450px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    padding: 10px 12px;
+    align-self: stretch;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
 }
