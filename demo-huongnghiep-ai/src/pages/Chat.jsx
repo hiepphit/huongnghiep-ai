@@ -7,7 +7,7 @@ import {
 import { ChatCompletionRequestMessageRoleEnum as ROLE } from "openai";
 
 import { useTypewriter } from "../utils/typeWriter";
-function Dashboard() {
+export const Chat = () => {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [chat, setChat] = useState([]);
@@ -56,5 +56,4 @@ function Dashboard() {
       </p>
     </div>
   );
-}
-export default Dashboard;
+};
