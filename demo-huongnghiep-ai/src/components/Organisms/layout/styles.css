@@ -1,0 +1,36 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FCFCFC;
+}
+
+.Chat-left {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #262626;
+}
+
+.Chat-right {
+    display: flex;
+    align-items: center;
+}
+
+.SearchBars {
+    margin-right: 30px;
+}
+
+.Notifications {
+    height: 48px;
+    border-left: 1px solid #EAEAEA;
+    margin-right: 30px;
+
+}
+
+.Header img {
+    width: 39px;
+    height: 39px;
+    border-radius: 50px;
+}

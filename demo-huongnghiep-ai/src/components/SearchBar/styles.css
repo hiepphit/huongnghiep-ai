@@ -1,0 +1,21 @@
+.search-bar {
+    display: flex;
+}
+
+.search-bar div {
+    display: flex;
+    align-items: center;
+    background-color: #F4F4F4;
+    border-radius: 12px;
+    padding: 10px;
+    width: 350px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    margin-left: 10px;
+    padding: 0;
+    width: 250px;
+}
