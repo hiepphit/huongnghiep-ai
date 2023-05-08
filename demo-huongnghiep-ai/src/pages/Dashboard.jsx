@@ -1,4 +1,4 @@
-import { MessageBlock } from "../components";
+import { MessageBlock, MessageInput } from "../components";
 
 // const content = 'this dashboard'
 function Dashboard() {
@@ -7,7 +7,11 @@ function Dashboard() {
     //   {/* {content} */}
 
     //   </div>
-    <MessageBlock />
+    <>
+      <MessageBlock isUser={true} />
+      <MessageBlock isUser={false} />
+      <MessageInput />
+    </>
   )
 }
 export default Dashboard;

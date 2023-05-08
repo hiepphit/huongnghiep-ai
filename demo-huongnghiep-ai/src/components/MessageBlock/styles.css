@@ -1,21 +1,19 @@
 body {
     background-color: #272B30;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.bg-white {
-    display: inline-block;
-    width: auto;
-    background-color: #fcfcfc;
-    border-radius: 16px;
-    color: #272B30;
-    font-size: 16px;
-    padding: 10px 12px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    transition: background-color 0.5s ease;
+.mg-right {
+    justify-content: flex-end;
+
 }
 
-.bg-white:hover {
-    background-color: #2A85FF;
-    color: #FCFCFC;
+.mg-right .text {
+    align-items: flex-end;
+}
+
+.mg-left .text {
+    align-items: flex-start;
 }

@@ -1,3 +1,5 @@
+import MessageItem from "../MessageItem/MessageItem";
+import logo from "../../assets/Logo.png";
 import "./styles.css";
 
 const dataQuestions = [
@@ -8,20 +10,25 @@ const dataQuestions = [
     'Tôi làm gì để cải thiện kỹ năng giao tiếp trong công việc?',
     'Làm sao để biết mình có thích một ngành nghề nào đó?'
 ];
-const Questions = ({ content }) => {
-    return (
-        <div className="bg-white">
-            "{content}"
-        </div>
-    )
-}
-function MessageBlock() {
+
+function MessageBlock({ isUser }) {
+
     return (
         <>
-            <p>
-                {dataQuestions.map((item, index) => <Questions content={item} key={index} />)}
-            </p>
+            <div className={`text-block ${isUser ? 'mg-right' : 'mg-left'}`}>
+                {!isUser && (<div><img src={logo} alt="logo" /></div>)}
+                <div className="text">
+                    {dataQuestions.map((item, index) => <MessageItem user={isUser} content={item} key={index} />)}
+                </div>
+                {isUser && (<div><img src={logo} alt="logo" /></div>)}
+            </div>
+
         </>
     )
+
 }
 export default MessageBlock
+
+
+
+

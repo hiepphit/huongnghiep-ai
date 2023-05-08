@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-block {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.message-item {
+    display: inline-block;
+    width: auto;
+    max-width: 50%;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    margin-right: 10px
+}
+
+.bg-white {
+    background-color: #fcfcfc;
+    color: #272B30;
+}
+
+.bg-blue {
+    background-color: #2A85FF;
+    color: #FCFCFC;
+}
