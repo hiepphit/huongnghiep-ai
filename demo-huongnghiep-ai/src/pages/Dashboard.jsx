@@ -1,4 +1,4 @@
-import { MessageBlock } from "../components"
+import { MessageBlock } from "../components";
 
 // const content = 'this dashboard'
 function Dashboard() {
@@ -10,4 +10,4 @@ function Dashboard() {
     <MessageBlock />
   )
 }
-export default Dashboard
+export default Dashboard;
