@@ -2,8 +2,6 @@ import React from "react";
 import "./styles.css";
 import { ReactComponent as Notification } from "../../../assets/icons/Notification.svg";
 import { SearchBar } from "../../index";
-import { Layout } from "antd";
-const { Header } = Layout;
 export const HeaderLayout = () => {
   return (
     <div className="Header">

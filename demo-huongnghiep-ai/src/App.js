@@ -32,6 +32,7 @@ function App() {
           <Route exact path={PAGES.ABOUT_US} element={<PrimaryLayout ><AboutUs /></PrimaryLayout>} />
           <Route exact path={PAGES.POLICY} element={<PrimaryLayout ><Policy /></PrimaryLayout>} />
           <Route exact path={PAGES.HELP} element={<PrimaryLayout ><Help /></PrimaryLayout>} />
+          <Route exact path="*" element={<PrimaryLayout >Not Found</PrimaryLayout>} />
         </Routes>
       </Router>
     </ConfigProvider>

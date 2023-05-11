@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { Layout, Menu } from "antd";
+import { Layout } from "antd";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../../../assets/index";
 import { APP_NAME } from "../../../constants/common";
@@ -20,20 +20,13 @@ export const SiderMenu = (props) => {
     children,
   } = props;
 
-  const onHoverSider = (e) => {
-    e.preventDefault();
-    if (collapse) {
-      setCollapse(false);
-    } else {
-      setCollapse(true);
-    }
-  };
   return (
     <SiderStyled
       collapsible
       collapsed={collapse}
-      onMouseEnter={onHoverSider}
-      onMouseLeave={onHoverSider}
+      onMous
+      onMouseEnter={() => setCollapse(false)}
+      onMouseLeave={() => setCollapse(true)}
       trigger={null}
       width={widthSider}
       style={{ background: "white" }}

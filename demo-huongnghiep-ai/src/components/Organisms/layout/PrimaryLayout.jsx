@@ -3,7 +3,6 @@ import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { SIDER_MENU } from "../../../constants/sider/sider-menu";
 import { SiderMenu } from "./SiderMenu";
-import { FooterLayout } from "./Footer";
 import { HeaderLayout } from "./Header";
 import { SIDER_WIDTH, THEME_LAYOUT } from "../../../constants/common";
 import { SiderContext } from "../../../repository/context/siderContext";
@@ -24,6 +23,10 @@ const PrimaryLayout = (props) => {
   const [openKeys, setOpenKeys] = useState(siderContext.openKey);
   const handleSetOpenAndSelectedKeys = useCallback(
     (pages, currentLocation, parentId) => {
+      if (currentLocation === "/") {
+        setSelectedKeys([]);
+        siderContext.updateSelectedKey([]);
+      }
       for (const page of pages) {
         if (page.route && page.route === currentLocation) {
           if (parentId) {
@@ -64,7 +67,7 @@ const PrimaryLayout = (props) => {
   }, [location, handleSetOpenAndSelectedKeys]);
 
   return (
-    <Layout>
+    <Layout style={{ maxHeight: "100vh" }}>
       <SiderMenu
         widthSider={SIDER_WIDTH}
         themeLayout={THEME_LAYOUT}
@@ -76,7 +79,7 @@ const PrimaryLayout = (props) => {
       ></SiderMenu>
       <Layout>
         <HeaderLayout />
-        <Content>{props.children}</Content>
+        <Content className="h-100">{props.children}</Content>
       </Layout>
     </Layout>
   );
