@@ -2,16 +2,21 @@
 
 .input-container {
     background-color: #FCFCFC;
-    padding: 5px;
+    padding: 12px 16px;
     border-radius: 12px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .input-container input[type="text"] {
     border: none;
     outline: none;
     background-color: #FCFCFC;
-    margin-right: 10px;
-    width: 95%;
+    margin-right: 10px;  
+    font-weight: 500;
+    font-size: 15px;
+    width: 100%;
     padding: 0px 10px;
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
-import { Menu, Space } from "antd";
+import { Menu } from "antd";
 const { SubMenu, ItemGroup, Item } = Menu;
 
 export const MenuCommon = (props) => {
@@ -11,15 +11,13 @@ export const MenuCommon = (props) => {
     return data.map((itemGroup) => {
       if (itemGroup.group) {
         return (
-          <>
-            <StyledItemGroup
-              title={itemGroup.name}
-              key={itemGroup.id}
-              icon={itemGroup.icon && itemGroup.icon}
-            >
-              {generateMenus(itemGroup.group)}
-            </StyledItemGroup>
-          </>
+          <StyledItemGroup
+            title={itemGroup.name}
+            key={itemGroup.id}
+            icon={itemGroup.icon && itemGroup.icon}
+          >
+            {generateMenus(itemGroup.group)}
+          </StyledItemGroup>
         );
       }
       if (itemGroup.children) {
@@ -49,7 +47,7 @@ export const MenuCommon = (props) => {
     });
   };
   return (
-    <Menu
+    <MenuStyled
       mode="vertical"
       selectedKeys={selectedKeys}
       openKeys={openKeys}
@@ -59,18 +57,32 @@ export const MenuCommon = (props) => {
       style={menuStyle}
     >
       {generateMenus(menus)}
-    </Menu>
+    </MenuStyled>
   );
 };
 
 const menuStyle = {
   minHeight: "calc(100% - 179px)",
-  padding: "12px 12px 0",
+  padding: "0 12px 0 12px",
 };
 
+const MenuStyled = styled(Menu)`
+  & > li:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 12px;
+  }
+`;
 const StyledItemGroup = styled(ItemGroup)`
   & > div {
     padding-left: 1.5rem;
+  }
+  li {
+    position: "absolute";
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 `;
 

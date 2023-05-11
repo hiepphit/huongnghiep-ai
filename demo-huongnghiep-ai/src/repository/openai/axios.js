@@ -1,6 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 
 const configuration = new Configuration({
     apiKey: OPENAI_API_KEY,
@@ -12,11 +12,16 @@ export async function sendChatToOpenAI(messages) {
         model: "gpt-3.5-turbo",
         messages,
     });
+    if(response.error) {
+        return response.error.message
+    }
+      console.log("==== res", response);
+
     return response.data.choices[0].message.content;
 }
 
 export async function sendMessageToOpenAI(message) {
-    const response = await openai.createChatCompletion({
+    const response = await openai.createCompletion({
         model: "gpt-3.5-turbo",
         prompt: message,
         temperature: 0.9,

@@ -1,17 +1,17 @@
 import { MessageBlock, MessageInput } from "../components";
+import { Button } from "antd";
 
 // const content = 'this dashboard'
 function Dashboard() {
   return (
-    // <div>
-    //   {/* {content} */}
-
-    //   </div>
     <>
-      <MessageBlock isUser={true} />
       <MessageBlock isUser={false} />
-      <MessageInput />
+      <MessageInput
+        rightButton={
+          <Button children="Gửi" type="primary" onClick={() => {}} />
+        }
+      />
     </>
-  )
+  );
 }
 export default Dashboard;

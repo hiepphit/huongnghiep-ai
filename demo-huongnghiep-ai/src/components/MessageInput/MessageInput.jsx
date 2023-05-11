@@ -1,14 +1,21 @@
 import "./styles.css";
-function MessageInput() {
-    return (
-        <form >
-            <div className="input-container">
-                <div className="input-text">
-                    <input type="text" placeholder="Nhập thông tin" />
-                    <button type="submit">Gửi</button>
-                </div>
-            </div>
-        </form>
-    )
+function MessageInput({ rightButton, onChange, placeholder, onEnter, value }) {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      onEnter();
+    }
+  };
+  return (
+    <div className="input-container">
+      <input
+        type="text"
+        onKeyDown={handleKeyDown}
+        placeholder={placeholder || "Say something ..."}
+        onChange={onChange}
+        value={value}
+      />
+      {rightButton}
+    </div>
+  );
 }
 export default MessageInput;
