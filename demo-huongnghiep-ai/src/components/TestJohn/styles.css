@@ -1,0 +1,47 @@
+.block {
+    width: 620px;
+    height: 308px;
+    background-color: #2A85FF;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.block-1 {
+    width: 258px;
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.block-1 h1 {
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    width: 258px;
+    height: 80px;
+    color: #FFFFFF;
+}
+
+.block-1 p {
+    width: 258px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.block-1 button {
+    width: 209px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 700;
+    color: #2A85FF;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+}
