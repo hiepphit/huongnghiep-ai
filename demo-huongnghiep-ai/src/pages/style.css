@@ -11,8 +11,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px;
-    gap: 40px;
+    padding: 30px;
+    gap: 30px;
 }
 
 .profile-2 {
@@ -20,3 +20,4 @@
     flex-direction: column;
     gap: 16px;
 }
+
