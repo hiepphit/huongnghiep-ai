@@ -1,6 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 const configuration = new Configuration({
     apiKey: OPENAI_API_KEY,
@@ -15,8 +15,6 @@ export async function sendChatToOpenAI(messages) {
     if(response.error) {
         return response.error.message
     }
-      console.log("==== res", response);
-
     return response.data.choices[0].message.content;
 }
 
