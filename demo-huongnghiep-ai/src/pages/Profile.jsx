@@ -7,10 +7,8 @@ import "./style.css";
 export const Profile = () => {
   return (
     <div className="profile-block">
+      <PersonalInfor />
       <div className="profile-1">
-        <PersonalInfor />
-      </div>
-      <div className="profile-2">
         <TestJohn />
         <StartRoadmap />
       </div>

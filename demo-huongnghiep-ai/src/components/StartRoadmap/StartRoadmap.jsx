@@ -1,11 +1,13 @@
 import "./styles.css";
-
+import { Link } from 'react-router-dom';
 function StartRoadmap() {
     return (
-        <div className="block-my">
-            <div className="block-one">
+        <div className="road-map">
+            <div className="road-one">
                 <h1>Cùng bạn xây dựng bản đồ sự nghiệp</h1>
-                <button>Khám phá ngay</button>
+                <Link to="/roadmap">
+                    <button>Khám phá ngay</button>
+                </Link>
             </div>
         </div>
     )

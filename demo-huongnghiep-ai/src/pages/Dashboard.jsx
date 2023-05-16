@@ -6,9 +6,10 @@ function Dashboard() {
   return (
     <>
       <MessageBlock isUser={false} />
+      
       <MessageInput
         rightButton={
-          <Button children="Gửi" type="primary" onClick={() => {}} />
+          <Button children="Gửi" type="primary" onClick={() => { }} />
         }
       />
     </>
