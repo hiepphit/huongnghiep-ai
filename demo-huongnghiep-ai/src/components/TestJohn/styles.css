@@ -2,7 +2,6 @@
     background-color: #2A85FF;
     border-radius: 16px;
     padding: 30px;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,13 +11,13 @@
     overflow: auto;
     color: #FFFFFF;
     border-radius: 10px;
-    height: 100%;
+
 }
 
 .test-one h1 {
     font-size: 32px;
     font-style: normal;
-    margin: 0;
+    margin: 12px;
     color: #FFFFFF;
 }
 
@@ -33,9 +32,10 @@
     width: fit-content;
     font-size: 15px;
     font-weight: 700;
+    line-height: 24px;
     color: #2A85FF;
     background-color: #FFFFFF;
     border: none;
     border-radius: 12px;
-    padding: 10px;
+    padding: 12px 20px;
 }

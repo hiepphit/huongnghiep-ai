@@ -1,13 +1,12 @@
 .road-map {
     background-color: #D6E3F680;
-    height: 100%;
     padding: 30px;
+    width: fit-content;
     border-radius: 16px;
 }
 
 .road-one {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;

@@ -2,7 +2,7 @@ import MessageItem from "../MessageItem/MessageItem";
 import logo from "../../assets/Logo.png";
 import "./styles.css";
 
-const dataQuestions = [
+export const dataQuestions = [
   "Thiết kế đồ hoạ là gì?",
   "Làm sao để trở thành nhiếp ảnh gia?",
   "Tôi muốn trở thành một nhân viên kinh doanh, tôi nên làm gì để chuẩn bị cho việc này?",
@@ -10,6 +10,7 @@ const dataQuestions = [
   "Tôi làm gì để cải thiện kỹ năng giao tiếp trong công việc?",
   "Làm sao để biết mình có thích một ngành nghề nào đó?",
 ];
+
 
 function MessageBlock({ isUser, messages }) {
   const data = messages || dataQuestions;
