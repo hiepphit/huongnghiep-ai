@@ -62,3 +62,39 @@
     align-items: center;
     gap: 30px;
 }
+
+.containers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.content-1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 28px;
+    color: #d61a1a;
+    padding: 20px;
+}
+
+.content-2 {
+    padding: 10px;
+    background-color: rgb(232, 230, 229);
+    text-align: justify;
+    text-indent: 10px;
+}
+
+.btn-content {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #188ede;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+}
