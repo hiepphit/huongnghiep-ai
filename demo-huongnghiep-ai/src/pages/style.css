@@ -6,3 +6,95 @@
     justify-content: space-between;
     padding: 40px;
 }
+
+.profile-block {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 30px;
+}
+
+.profile-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bg-white {
+    color: #272B30;
+    padding: 10px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.my-dashboard {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.title-content {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #272B30;
+    letter-spacing: -0.01em;
+}
+
+.text-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.containers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.content-1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 28px;
+    color: #d61a1a;
+    padding: 20px;
+}
+
+.content-2 {
+    padding: 10px;
+    background-color: rgb(232, 230, 229);
+    text-align: justify;
+    text-indent: 10px;
+}
+
+.btn-content {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #188ede;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+}

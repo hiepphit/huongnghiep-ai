@@ -1,0 +1,41 @@
+.test-john {
+    background-color: #2A85FF;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-one {
+    overflow: auto;
+    color: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.test-one h1 {
+    font-size: 32px;
+    font-style: normal;
+    margin: 12px;
+    color: #FFFFFF;
+}
+
+.test-one p {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.test-one button {
+    width: fit-content;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #2A85FF;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+}
