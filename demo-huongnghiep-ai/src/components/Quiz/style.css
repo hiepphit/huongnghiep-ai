@@ -1,10 +1,9 @@
 .quiz-container {
     margin-bottom: 20px;
-    padding: 20px;
 }
 
 .quiz-question {
-    font-weight: bold;
+    align-items: flex-start;
 }
 
 .quiz-choices {
