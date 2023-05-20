@@ -1,6 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 const configuration = new Configuration({
     apiKey: OPENAI_API_KEY,
@@ -8,16 +8,18 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export async function sendChatToOpenAI(messages) {
+    try {
+        
     const response = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
+        model: "gpt-3.5-turbo-0301",
         messages,
     });
-    if(response.error) {
-        return response.error.message
-    }
-      console.log("==== res", response);
 
     return response.data.choices[0].message.content;
+    } catch (error) {
+        console.log(error);
+        return []
+    }
 }
 
 export async function sendMessageToOpenAI(message) {

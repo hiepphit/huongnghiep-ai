@@ -4,7 +4,7 @@ export const useTypewriter = (text) => {
     const [content, setContent] = useState("");
     useEffect(() => {
         if (text) {
-            const textArray = text.split(" ");
+            const textArray = text.replace("```", "<pre>").split(" ");
             let typewrittenText = "";
             textArray.forEach((word, index) => {
                 setTimeout(() => {

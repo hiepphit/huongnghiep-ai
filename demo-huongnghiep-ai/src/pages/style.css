@@ -98,3 +98,18 @@
     font-size: 20px;
     border-radius: 20px;
 }
+li.ant-menu-item {
+    display: flex !important;
+    align-items: center;
+  }
+.btn-add-topic {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.btn-add-topic>button {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    font-weight: 700;
+    gap: 30px;
+}

@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import PersonalInfor from "./PersonalInfor/PersonalInfor"
 import TestJohn from "./TestJohn/TestJohn";
 import StartRoadmap from "./StartRoadmap/StartRoadmap";
+import ChatTyping from "./ChatTyping/ChatTyping";
 
 export {
     MessageBlock,
@@ -15,5 +16,6 @@ export {
     SearchBar,
     PersonalInfor,
     TestJohn,
-    StartRoadmap
+    StartRoadmap,
+    ChatTyping,
 }

@@ -1,8 +1,11 @@
 import MessageItem from "../MessageItem/MessageItem";
 import logo from "../../assets/Logo.png";
 import "./styles.css";
+import { useContext } from "react";
+import { UserContext } from "../../repository/context/userContext";
 
 export const dataQuestions = [
+  "Xin lỗi tôi không có câu trả lời cho câu hỏi này. Bạn có thể hỏi một số câu hỏi sau?",
   "Thiết kế đồ hoạ là gì?",
   "Làm sao để trở thành nhiếp ảnh gia?",
   "Tôi muốn trở thành một nhân viên kinh doanh, tôi nên làm gì để chuẩn bị cho việc này?",
@@ -11,8 +14,9 @@ export const dataQuestions = [
   "Làm sao để biết mình có thích một ngành nghề nào đó?",
 ];
 
+function MessageBlock({ isUser, messages, loadingItem }) {
+  const userContext = useContext(UserContext);
 
-function MessageBlock({ isUser, messages }) {
   const data = messages || dataQuestions;
   return (
     <>
@@ -23,13 +27,21 @@ function MessageBlock({ isUser, messages }) {
           </div>
         )}
         <div className="text">
-          {data.map((item, index) => (
-            <MessageItem user={isUser} content={item} key={index} />
-          ))}
+          {loadingItem
+            ? loadingItem
+            : data.map((item, index) => (
+                <MessageItem user={isUser} content={item} key={index} />
+              ))}
         </div>
         {isUser && (
           <div>
-            <img src={logo} alt="logo" />
+            <img
+              width={48}
+              height={48}
+              className="avatar-md"
+              src={userContext.user.avatar}
+              alt="logo"
+            />
           </div>
         )}
       </div>

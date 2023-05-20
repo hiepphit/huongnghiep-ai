@@ -1,12 +1,20 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu } from "antd";
+import { IconOptions } from "../../assets";
+import "./style.css";
 const { SubMenu, ItemGroup, Item } = Menu;
-
 export const MenuCommon = (props) => {
-  const { openKeys, onOpenChange, selectedKeys, menus, themeLayout, onSelect } =
-    props;
+  const {
+    openKeys,
+    onOpenChange,
+    selectedKeys,
+    menus,
+    themeLayout,
+    onSelect,
+    isChatMenu,
+  } = props;
   const generateMenus = (data) => {
     return data.map((itemGroup) => {
       if (itemGroup.group) {
@@ -34,14 +42,23 @@ export const MenuCommon = (props) => {
         <StyledItem
           key={itemGroup.id}
           icon={
-            itemGroup.icon && itemGroup.id === selectedKeys[0]
+            itemGroup.iconActive && itemGroup.id === selectedKeys[0]
               ? itemGroup.iconActive
               : itemGroup.icon
           }
         >
-          <NavLink to={itemGroup.route || "#"}>
-            <StyledSpan>{itemGroup.name}</StyledSpan>
-          </NavLink>
+          {isChatMenu ? (
+            <div className="chat-menu-item">
+              <Link to={"/chat/" + itemGroup.route}>
+                <StyledSpan>{itemGroup.name}</StyledSpan>
+              </Link>
+              {itemGroup.id === selectedKeys[0] && <IconOptions />}
+            </div>
+          ) : (
+            <NavLink to={itemGroup.route || "#"}>
+              <StyledSpan>{itemGroup.name}</StyledSpan>
+            </NavLink>
+          )}
         </StyledItem>
       );
     });
@@ -67,11 +84,14 @@ const menuStyle = {
 };
 
 const MenuStyled = styled(Menu)`
-  & > li:last-child {
+  & > li:nth-child(2) {
     position: absolute;
     bottom: 0;
     left: 12px;
     right: 12px;
+  }
+  & > li:last-child .ant-menu-title-content {
+    width: 100%;
   }
 `;
 const StyledItemGroup = styled(ItemGroup)`

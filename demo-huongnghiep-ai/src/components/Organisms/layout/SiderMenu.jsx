@@ -24,7 +24,6 @@ export const SiderMenu = (props) => {
     <SiderStyled
       collapsible
       collapsed={collapse}
-      onMous
       onMouseEnter={() => setCollapse(false)}
       onMouseLeave={() => setCollapse(true)}
       trigger={null}

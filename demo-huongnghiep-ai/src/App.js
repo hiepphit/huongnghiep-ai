@@ -26,7 +26,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path={PAGES.DASHBOARD} element={<PrimaryLayout ><Dashboard /></PrimaryLayout>} />
-          <Route exact path={PAGES.CHAT} element={<PrimaryLayout ><Chat /></PrimaryLayout>} />
+          <Route path={PAGES.CHAT} element={<PrimaryLayout ><Chat /></PrimaryLayout>} />
+          <Route path={PAGES.CHAT+'/:slug'} element={<PrimaryLayout ><Chat /></PrimaryLayout>} />
           <Route exact path={PAGES.PROFILE} element={<PrimaryLayout ><Profile /></PrimaryLayout>} />
           <Route exact path={PAGES.ROADMAP} element={<PrimaryLayout ><Roadmap /></PrimaryLayout>} />
           <Route exact path={PAGES.ABOUT_US} element={<PrimaryLayout ><AboutUs /></PrimaryLayout>} />
